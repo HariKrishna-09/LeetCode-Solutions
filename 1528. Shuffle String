@@ -1,0 +1,10 @@
+class Solution {
+    public String restoreString(String s, int[] indices) {
+        String t;
+        for(int i=0;i<s.length();i++){
+            t.charAt(indices[i])=s.chatAt(i);
+        }
+        return t;
+        
+    }
+}
