@@ -1,0 +1,19 @@
+class Solution {
+    public int mirrorDistance(int n) {
+        int rev=0;
+        int x=n;
+        int num=0;
+        while(n!=0){
+            num=n%10;
+            rev=rev*10+num;
+            n=n/10;
+        }
+        int v=rev-x;
+        if(v>=0){
+            return v;
+        }
+        else{
+            return x-rev;
+        }
+    }
+}
