@@ -20,5 +20,25 @@ class Solution {
             int m2=(s/2);
             return (mer[m1]+mer[m2])/2.0;
         }
+
+
+
+
+
+
+
+
+
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        b=nums1+nums2
+        b.sort()
+        s=len(b)
+        if s%2==1:
+            return float(b[s//2])
+        else:
+            m1=(s//2)-1
+            m2=s//2
+            return (b[m1]+b[m2])/2.0
     }
 }
