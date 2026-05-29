@@ -1,0 +1,13 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        stot={}
+        ttos={}
+        for i in range(len(s)):
+            c1=s[i]
+            c2=t[i]
+            if((c1 in stot and stot[c1]!=c2) or (c2 in ttos and ttos[c2]!=c1)):
+                return False
+            stot[c1]=c2
+            ttos[c2]=c1
+        return True
+        
